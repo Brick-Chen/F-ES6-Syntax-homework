@@ -5,11 +5,9 @@ const inject = (items, sections) => {
     let piece = items.slice(pre, sections[i].index);
     output = output.concat(piece);
     output.push(sections[i].content);
-    
     pre = sections[i].index;
   }
   output = output.concat(items.slice(pre));
-  console.log(output);
   return output;
 };
 export { inject };
